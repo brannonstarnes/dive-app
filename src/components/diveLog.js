@@ -1,6 +1,6 @@
 import React from "react";
 
-function Log(){
+function Log(props){
     return(
         <div id='dive-log-container'>
             <title> Diving Log </title>

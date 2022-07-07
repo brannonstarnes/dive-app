@@ -1,6 +1,6 @@
 import React from "react";
 
-function ClockButtons(){
+function ClockButtons(props){
     return(
         <ul>
             <li>Left Surface</li>
