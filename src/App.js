@@ -13,11 +13,20 @@ function App(props) {
   const [depth, setDepth] = useState([])
   const [onO2, setOnO2] = useState([])
   const [leftSurface, setLS] = useState([])
+  const [diveLog, setDiveLog] = useState([])
+
 
   const getBottomTime = (leftSurf, leftBott) => {
     let bottomTime = leftSurf - leftBott
     return setBottomTime(bottomTime)
   }
+
+  
+  const makeDiveLogEntry= (entry) => {
+    let entries = [...diveLog, entry];
+      setDiveLog(entries || "");
+  }
+    
 
 
   return (
@@ -25,8 +34,8 @@ function App(props) {
       <Header />
       <Forms getBT={getBottomTime} setDepth={setDepth} setBT={setBottomTime} depth={depth} BT={bottomTime}/> 
       <Clock />
-      <ClockButtons getBT={getBottomTime} setDepth={setDepth} setOnO2={setOnO2} setLS={setLS} />
-      <Log LS={leftSurface} BT={bottomTime} D={depth} onO2={onO2} /> 
+      <ClockButtons getBT={getBottomTime} setDepth={setDepth} setOnO2={setOnO2} setLS={setLS} makeDiveLogEntry={makeDiveLogEntry}/>
+      <Log LS={leftSurface} BT={bottomTime} D={depth} onO2={onO2} diveLog={diveLog}/> 
     </>
   ) ;
 }
