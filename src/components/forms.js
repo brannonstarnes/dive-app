@@ -3,13 +3,17 @@ import { useState } from "react";
 
 function Forms(props){
 
-    const handleSubmit= (e) => {
-        e.preventDefault();
-    }
-
     const [formDepth, setFormDepth] = useState();
     const [formBT, setFormBT] = useState();
+    
+    const handleSubmit= (e) => {
+        e.preventDefault();
+        props.setBT(formBT);
+        props.setDepth(formDepth);
+    }
 
+
+    
     return (
         
         <div className='forms-container'>
