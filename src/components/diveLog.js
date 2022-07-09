@@ -17,6 +17,9 @@ function Log(props){
                     {mapEntries || ""}
                 </ul>
             </div>
+            <div className="tableSchedRGD">
+                <h2>T/S: {props.formTSRGD}</h2>
+            </div>
         </div>
     )
 }
