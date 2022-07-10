@@ -18,7 +18,7 @@ function Log(props){
                 </ul>
             </div>
             <div className="tableSchedRGD">
-                <h2>T/S: {props.formTSRGD}</h2>
+                <h2>T/S: {props.D}/{props.schedule}{props.formTSRGD}</h2>
             </div>
         </div>
     )

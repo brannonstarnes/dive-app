@@ -15,13 +15,9 @@ function Forms(props){
     const handleSubmit= (e) => {
         e.preventDefault();
         var newDepth = getUsableDepth(formDepth) //get corrected depth
-        console.log("New Depth: ", newDepth)
         var table = getChart(newDepth, chartMap) //gets chart by using corrected depth
-        console.log("Chosen Table: ", table)
-        var schedule = getSchedule(formBT, table) //determines which schedule to use in chart 
-        console.log("Chosen Schedule: ", schedule)
-        const TSRGD = getRGD(table, schedule)
-        console.log(TSRGD)
+        var calculatedSchedule = getSchedule(formBT, table) //determines which schedule to use in chart 
+        const TSRGD = getRGD(table, calculatedSchedule)
         props.setFormTSRGD(TSRGD)
     }
 

@@ -15,6 +15,7 @@ function App(props) {
   const [leftSurface, setLS] = useState([])
   const [diveLog, setDiveLog] = useState([])
   const [formTSRGD, setFormTSRGD] = useState();
+  const [schedule, setSchedule] = useState();
 
   const getBottomTime = (leftSurf, leftBott) => {
     let bottomTime = leftSurf - leftBott
@@ -31,10 +32,10 @@ function App(props) {
   return (
     <>
       <Header />
-      <Forms getBT={getBottomTime} setDepth={setDepth} setBT={setBottomTime} depth={depth} BT={bottomTime} setFormTSRGD={setFormTSRGD}/> 
+      <Forms getBT={getBottomTime} setDepth={setDepth} setBT={setBottomTime} depth={depth} BT={bottomTime} setFormTSRGD={setFormTSRGD} setSchedule={setSchedule}/> 
       <Clock />
       <ClockButtons getBT={getBottomTime} setDepth={setDepth} setOnO2={setOnO2} setLS={setLS} makeDiveLogEntry={makeDiveLogEntry}/>
-      <Log LS={leftSurface} BT={bottomTime} D={depth} onO2={onO2} diveLog={diveLog} formTSRGD={formTSRGD}/> 
+      <Log LS={leftSurface} BT={bottomTime} D={depth} onO2={onO2} diveLog={diveLog} formTSRGD={formTSRGD} schedule={schedule}/> 
     </>
   ) ;
 }
