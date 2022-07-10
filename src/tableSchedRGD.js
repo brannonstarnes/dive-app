@@ -1,6 +1,5 @@
 import {chartMap} from "./charts";
 
-
 export function getUsableDepth(userDepth){
     let testDepth = 10
     let newDepth = 1
