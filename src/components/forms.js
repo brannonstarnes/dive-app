@@ -1,15 +1,24 @@
 import React from "react";
 import { useState } from "react";
+import {getUsableDepth} from '../tableSchedRGD.js'
+import {getChart} from '../tableSchedRGD.js'
+import {getSchedule} from '../tableSchedRGD.js'
+import {getRGD} from '../tableSchedRGD'
+import {chartMap} from "../charts.js";
 
 function Forms(props){
 
     const [formDepth, setFormDepth] = useState();
     const [formBT, setFormBT] = useState();
     
+    
     const handleSubmit= (e) => {
         e.preventDefault();
-        props.setBT(formBT);
-        props.setDepth(formDepth);
+        var newDepth = getUsableDepth(formDepth) //get corrected depth
+        var table = getChart(newDepth, chartMap) //gets chart by using corrected depth
+        var calculatedSchedule = getSchedule(formBT, table) //determines which schedule to use in chart 
+        const TSRGD = getRGD(table, calculatedSchedule)
+        props.setFormTSRGD(TSRGD)
     }
 
 

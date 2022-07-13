@@ -1,32 +1,3 @@
-
-    const chartMap = new Map();
-    chartMap.set(10, noD10);
-    chartMap.set(15, noD15);
-    chartMap.set(20, noD20);
-    chartMap.set(25, noD25);
-    chartMap.set(30, noD30);
-    chartMap.set(35, noD35);
-    chartMap.set(40, noD40);
-    chartMap.set(45, noD45);
-    chartMap.set(50, noD50);
-    chartMap.set(55, noD55);
-    chartMap.set(60, noD60);
-    chartMap.set(70, noD70);
-    chartMap.set(80, noD80);
-    chartMap.set(90, noD90);
-    chartMap.set(100, noD100);
-    chartMap.set(110, noD110);
-    chartMap.set(120, noD120);
-    chartMap.set(130, noD130);
-    chartMap.set(140, noD140);
-    chartMap.set(150, noD150);
-    chartMap.set(160, noD160);
-    chartMap.set(170, noD170);
-    chartMap.set(180, noD180);
-    chartMap.set(190, noD190);
-
-    export default chartMap;
-
     // TODO: Commented out are Decompression Tables. Once No-Deco is complete, finish Deco tables.
     // const thirtyDeco380 = {
     //     deco: true,
@@ -407,3 +378,30 @@
         WARNING: "Decompression Required!",
       };
   
+      export const chartMap = new Map();
+      chartMap.set(10, noD10);
+      chartMap.set(15, noD15);
+      chartMap.set(20, noD20);
+      chartMap.set(25, noD25);
+      chartMap.set(30, noD30);
+      chartMap.set(35, noD35);
+      chartMap.set(40, noD40);
+      chartMap.set(45, noD45);
+      chartMap.set(50, noD50);
+      chartMap.set(55, noD55);
+      chartMap.set(60, noD60);
+      chartMap.set(70, noD70);
+      chartMap.set(80, noD80);
+      chartMap.set(90, noD90);
+      chartMap.set(100, noD100);
+      chartMap.set(110, noD110);
+      chartMap.set(120, noD120);
+      chartMap.set(130, noD130);
+      chartMap.set(140, noD140);
+      chartMap.set(150, noD150);
+      chartMap.set(160, noD160);
+      chartMap.set(170, noD170);
+      chartMap.set(180, noD180);
+      chartMap.set(190, noD190);
+  
+      export default chartMap;
