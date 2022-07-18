@@ -29,7 +29,7 @@ function Clock(props){
                 <span className="clockTime" id="seconds">{("0" + Math.floor((time /1000) % 60)).slice(-2)}</span>
                 {/* <span className="clockTime" id="milliseconds">{("0" + Math.floor((time /10) % 100)).slice(-2)}</span> */}
             </span>
-            <ClockButtons makeDiveLogEntry={props.makeDiveLogEntry} setIsRunning={setIsRunning} diveLog={props.diveLog}/>
+            <ClockButtons makeDiveLogEntry={props.makeDiveLogEntry} setIsRunning={setIsRunning} diveLog={props.diveLog} setOnO2={props.setOnO2} onO2={props.onO2}/>
         </div>
         )
         

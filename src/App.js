@@ -8,9 +8,10 @@ import Log from "./components/diveLog";
 function App(props) {
 
   
-  const [bottomTime, setBottomTime] = useState([]) 
-  const [depth, setDepth] = useState([])
-  const [diveLog, setDiveLog] = useState([])
+  const [bottomTime, setBottomTime] = useState([]);
+  const [depth, setDepth] = useState([]);
+  const [onO2, setOnO2] = useState(false);
+  const [diveLog, setDiveLog] = useState([]);
   const [formTSRGD, setFormTSRGD] = useState();
   const [schedule, setSchedule] = useState();
   // const [reachBottom, setRB] = useState(0);
@@ -31,7 +32,7 @@ function App(props) {
     <>
       <Header />
       <Forms getBT={getBottomTime} setDepth={setDepth} setBT={setBottomTime} depth={depth} BT={bottomTime} setFormTSRGD={setFormTSRGD} setSchedule={setSchedule}/> 
-      <Clock makeDiveLogEntry={makeDiveLogEntry} diveLog={diveLog}/>
+      <Clock makeDiveLogEntry={makeDiveLogEntry} diveLog={diveLog} setOnO2={setOnO2} onO2={onO2}/>
       <Log diveLog={diveLog} BT={bottomTime} D={depth} formTSRGD={formTSRGD} schedule={schedule}/> 
     </>
   ) ;
