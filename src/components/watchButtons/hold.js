@@ -11,9 +11,8 @@ function Hold(props){
         <button onClick={()=> 
             [
             hold = new Date (),
-            // descent = (RB-LS),
             stringHold = stringifyTime(hold),
-            props.makeDiveLogEntry(`RB ${stringHold}`)
+            props.makeDiveLogEntry(`HOLD! ${stringHold}`)
             ]
         }>HOLD!</button>
     )
