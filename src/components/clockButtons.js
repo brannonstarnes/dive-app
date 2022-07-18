@@ -29,7 +29,7 @@ function ClockButtons(props){
             
             <button onClick={()=>props.setIsRunning(false)}>STOP</button>
             
-            <button onClick={()=>props.setTime(0)}>Reset</button>
+            <button onClick={()=>props.setClockTime(0)}>Reset</button>
         </>
     )
 }
