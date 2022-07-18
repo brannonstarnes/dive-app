@@ -1,23 +1,22 @@
 import React from "react";
 import stringifyTime from '../../calculations/stringifyTime'
+import { roundUpTime } from "../../calculations/stringifyTime";
 
 function LeftBottom(props){
     
     let LB;
     let stringLB;
-    // let bottomTime // LB-LS = BT
+    let BT;
 
-    // useEffect(()=>{
-    //     props.makeDiveLogEntry((`LB ${diveLogDict[LB]}` ))
-    // })
-
+    
     return (
         <button onClick={()=> 
             [
             LB = new Date (),
+            props.setLB(LB),
+            BT = (LB.getTime())-(props.LS.getTime()),
             stringLB = stringifyTime(LB),
-            // bottomTime = (LB-LS),
-            props.makeDiveLogEntry(`LB ${stringLB}`)
+            props.makeDiveLogEntry(`LB ${stringLB}, BT :${roundUpTime(BT)}`)
             ]
         }>Left Bottom</button>
     )
