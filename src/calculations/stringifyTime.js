@@ -9,7 +9,7 @@ export default function stringifyTime(dateObj){
 }
 
 
-function addLeadingZerosToTimes(timeIncrement){
+export function addLeadingZerosToTimes(timeIncrement){
         if (timeIncrement < 10){
             console.log("added zero to ", timeIncrement)
             timeIncrement = `0${timeIncrement}`;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import LeftBottom from "./watchButtons/leftBottom";
 import LeftSurface from "./watchButtons/leftSurface";
 import ReachedBottom from "./watchButtons/reachBottom";
@@ -13,12 +13,12 @@ function ClockButtons(props){
     // const getDescent = (reachBottom, leftSurface) => {
     //     return reachBottom - leftSurface
     //   }
-
+    const [LS, setLS] = useState();
    
     return(
         <>
-            <LeftSurface setIsRunning={props.setIsRunning} makeDiveLogEntry={props.makeDiveLogEntry}/>
-            <ReachedBottom makeDiveLogEntry={props.makeDiveLogEntry}/>
+            <LeftSurface setLS={setLS} setIsRunning={props.setIsRunning} makeDiveLogEntry={props.makeDiveLogEntry}/>
+            <ReachedBottom makeDiveLogEntry={props.makeDiveLogEntry} LS={LS}/>
             <LeftBottom makeDiveLogEntry={props.makeDiveLogEntry} />
             <ReachSurface makeDiveLogEntry={props.makeDiveLogEntry}/>
             <Hold makeDiveLogEntry={props.makeDiveLogEntry}/>

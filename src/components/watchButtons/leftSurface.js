@@ -10,6 +10,7 @@ function LeftSurface(props){
             [
             props.setIsRunning(true),
             LS = new Date (),
+            props.setLS(LS),
             stringLS = stringifyTime(LS),
             props.makeDiveLogEntry(`LS ${stringLS}`)
             ]
