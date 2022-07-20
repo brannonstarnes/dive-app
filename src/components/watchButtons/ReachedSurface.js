@@ -2,7 +2,7 @@ import React from "react";
 import stringifyTime from '../../calculations/stringifyTime'
 import { addLeadingZerosToTimes } from "../../calculations/stringifyTime";
 
-function ReachSurface(props){
+function ReachedSurface(props){
     
     let RS;
     let stringRS;
@@ -23,4 +23,4 @@ function ReachSurface(props){
     )
 }
 
-export default ReachSurface;
+export default ReachedSurface;
