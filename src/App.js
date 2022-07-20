@@ -4,10 +4,9 @@ import Header from "./components/header";
 import Forms from "./components/forms";
 import Clock from "./components/clock";
 import Log from "./components/diveLog";
+import PropTypes from "prop-types";
 
-function App(props) {
-
-  
+function App() {
   const [bottomTime, setBottomTime] = useState([]);
   const [depth, setDepth] = useState([]);
   const [onO2, setOnO2] = useState(false);
@@ -27,7 +26,6 @@ function App(props) {
       setDiveLog(entries || "");
   }
 
-
   return (
     <>
       <Header />
@@ -37,5 +35,16 @@ function App(props) {
     </>
   ) ;
 }
-
+App.PropTypes ={
+  getBT: PropTypes.func.isRequired,
+  setBT: PropTypes.func.isRequired,
+  setDepth: PropTypes.func.isRequired,
+  depth: PropTypes.number.isRequired,
+  BT: PropTypes.object.isRequired,
+  setFormTSRGD: PropTypes.func.isRequired,
+  setSchedule: PropTypes.func.isRequired,
+  diveLog: PropTypes.array.isRequired, 
+  setOnO2: PropTypes.func.isRequired,
+  onO2: PropTypes.object.isRequired
+}
 export default App;

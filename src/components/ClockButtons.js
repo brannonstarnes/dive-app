@@ -5,7 +5,7 @@ import ReachedBottom from "./watchButtons/ReachedBottom";
 import ReachSurface from "./watchButtons/ReachedSurface";
 import Hold from "./watchButtons/Hold";
 import OnO2 from "./watchButtons/OnO2";
-
+import PropTypes from 'prop-types';
 
 function ClockButtons(props){
  
@@ -32,6 +32,15 @@ function ClockButtons(props){
             <button onClick={()=>props.setClockTime(0)}>Reset</button>
         </>
     )
+}
+
+ClockButtons.propTypes = {
+    LS: PropTypes.node,
+    makeDiveLogEntry: PropTypes.func,
+    setClockTime: PropTypes.func,
+    setIsRunning: PropTypes.func,
+    setOnO2: PropTypes.func,
+    onO2: PropTypes.object
 }
 
 export default ClockButtons;

@@ -1,8 +1,7 @@
 import React from "react"; 
 import stringifyTime from "../../calculations/stringifyTime";
+import PropTypes from 'prop-types';
 
-
-/* dssfsd */
 function Hold(props){
     let hold;
     let stringHold;
@@ -17,6 +16,10 @@ function Hold(props){
             ]
         }>HOLD!</button>
     )
+}
+
+Hold.propTypes = {
+    makeDiveLogEntry: PropTypes.func.isRequired
 }
 
 export default Hold;

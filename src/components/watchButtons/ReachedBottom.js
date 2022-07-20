@@ -1,6 +1,7 @@
 import React from "react"; 
 import stringifyTime from "../../calculations/stringifyTime";
 import { roundUpTime } from "../../calculations/stringifyTime";
+import PropTypes from "prop-types";
 
 function ReachedBottom(props){
     
@@ -18,6 +19,11 @@ function ReachedBottom(props){
             ]
         }>Reached Bottom</button>
     )
+}
+
+ReachedBottom.propTypes = {
+    LS: PropTypes.object,
+    makeDiveLogEntry: PropTypes.func
 }
 
 export default ReachedBottom;

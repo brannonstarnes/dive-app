@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from "react";
 import ClockButtons from "./clockButtons";
+import PropTypes from 'prop-types';
 
 //Credit: https://w3collective.com/react-stopwatch/
 function Clock(props){
     const [time, setClockTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
-
-    
 
     useEffect(() =>{
         let interval;
@@ -31,7 +30,17 @@ function Clock(props){
             </span>
             <ClockButtons makeDiveLogEntry={props.makeDiveLogEntry} setIsRunning={setIsRunning} setClockTime={setClockTime} diveLog={props.diveLog} setOnO2={props.setOnO2} onO2={props.onO2}/>
         </div>
-        )
-        
-}; 
-export default Clock;
+        )     
+    }
+    
+    Clock.propTypes = {
+        time: PropTypes.number,
+        makeDiveLogEntry: PropTypes.func,
+        diveLog: PropTypes.func,
+        setFormTSRGD: PropTypes.func,
+        setOnO2: PropTypes.func,
+        onO2: PropTypes.object
+    } 
+    
+    
+    export default Clock;

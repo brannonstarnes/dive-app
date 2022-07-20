@@ -1,6 +1,7 @@
 import React from "react";
 import stringifyTime from '../../calculations/stringifyTime'
 import { addLeadingZerosToTimes } from "../../calculations/stringifyTime";
+import PropTypes from 'prop-types';
 
 function ReachedSurface(props){
     
@@ -21,6 +22,12 @@ function ReachedSurface(props){
             ]
         }>Reached Surface</button>
     )
+}
+
+ReachedSurface.propTypes = {
+    LB: PropTypes.object,
+    setRS: PropTypes.func,
+    makeDiveLogEntry: PropTypes.func.isRequired
 }
 
 export default ReachedSurface;
