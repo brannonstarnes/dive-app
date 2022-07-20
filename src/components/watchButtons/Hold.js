@@ -1,25 +1,27 @@
-import React from "react"; 
+import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function Hold(props){
-    let hold;
-    let stringHold;
-    // let holdTime; //resume - hold = descent
+function Hold(props) {
+  let hold;
+  let stringHold;
+  // let holdTime; //resume - hold = descent
 
-    return (
-        <button onClick={()=> 
-            [
-            hold = new Date (),
-            stringHold = stringifyTime(hold),
-            props.makeDiveLogEntry(`HOLD! ${stringHold}`)
-            ]
-        }>HOLD!</button>
-    )
+  return (
+    <button
+      onClick={() => [
+        (hold = new Date()),
+        (stringHold = stringifyTime(hold)),
+        props.makeDiveLogEntry(`HOLD! ${stringHold}`),
+      ]}
+    >
+      HOLD!
+    </button>
+  );
 }
 
 Hold.propTypes = {
-    makeDiveLogEntry: PropTypes.func
-}
+  makeDiveLogEntry: PropTypes.func,
+};
 
 export default Hold;
