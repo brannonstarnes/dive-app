@@ -21,32 +21,27 @@ function ClockButtons(props) {
       />
 
       <ReachedBottom makeDiveLogEntry={props.makeDiveLogEntry} LS={LS} />
-
       <LeftBottom
         setLB={setLB}
         makeDiveLogEntry={props.makeDiveLogEntry}
         LS={LS}
       />
-
       <ReachSurface
         setRS={setRS}
         makeDiveLogEntry={props.makeDiveLogEntry}
         LB={LB}
       />
-
       <Hold
         makeDiveLogEntry={props.makeDiveLogEntry}
         setOnHold={props.setOnHold}
         onHold={props.onHold}
       />
-
       <OnO2
         setOnO2={props.setOnO2}
         onO2={props.onO2}
         makeDiveLogEntry={props.makeDiveLogEntry}
         RS={RS}
       />
-
       <Button
         variant="contained"
         color="error"
@@ -54,7 +49,6 @@ function ClockButtons(props) {
       >
         STOP
       </Button>
-
       <Button
         variant="contained"
         color="secondary"
