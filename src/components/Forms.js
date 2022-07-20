@@ -49,12 +49,12 @@ function Forms(props){
     
 }
 
-Forms.PropTypes = {
+Forms.propTypes = {
     BT: PropTypes.number,
     setDepth: PropTypes.func,
     setBT: PropTypes.func,
     setFormTSRGD: PropTypes.func,
-    formBT: PropTypes.object.isRequired
+    formBT: PropTypes.number
 }
 
 export default Forms;

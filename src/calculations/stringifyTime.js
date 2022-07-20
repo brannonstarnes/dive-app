@@ -20,6 +20,6 @@ export function addLeadingZerosToTimes(timeIncrement){
 
 export function roundUpTime(time) {
     let conversion = (time / 60000) 
-    let newTime = Math.ceil(conversion)
+    let newTime = Math.ceil(conversion) 
     return addLeadingZerosToTimes(newTime)
 }

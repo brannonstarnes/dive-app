@@ -22,7 +22,7 @@ function LeftBottom(props){
 }
 
 LeftBottom.propTypes = {
-    LS: PropTypes.node,
+    LS: PropTypes.object,
     setLB: PropTypes.func,
     makeDiveLogEntry: PropTypes.func
 }

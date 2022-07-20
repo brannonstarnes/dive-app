@@ -1,5 +1,6 @@
 import React from "react"; 
 import stringifyTime from "../../calculations/stringifyTime";
+import  PropTypes from 'prop-types';
 
 function LeftSurface(props){
     
@@ -16,6 +17,12 @@ function LeftSurface(props){
             ]
         }>Left Surface</button>
     )
+}
+
+LeftSurface.propTypes = {
+    setIsRunning: PropTypes.func,
+    setLS: PropTypes.func,
+    makeDiveLogEntry: PropTypes.func
 }
 
 export default LeftSurface;

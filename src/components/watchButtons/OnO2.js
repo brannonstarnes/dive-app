@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react"; 
 import stringifyTime from "../../calculations/stringifyTime";
+import PropTypes from 'prop-types';
 
 function OnO2(props){
 
@@ -32,4 +33,9 @@ function OnO2(props){
     )
 }
 
+OnO2.propTypes = {
+    makeDiveLogEntry: PropTypes.func,
+    onO2: PropTypes.bool,
+    setOnO2: PropTypes.func
+}
 export default OnO2;

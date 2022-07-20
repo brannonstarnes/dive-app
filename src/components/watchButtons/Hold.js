@@ -19,7 +19,7 @@ function Hold(props){
 }
 
 Hold.propTypes = {
-    makeDiveLogEntry: PropTypes.func.isRequired
+    makeDiveLogEntry: PropTypes.func
 }
 
 export default Hold;

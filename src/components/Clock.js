@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import ClockButtons from "./clockButtons";
+import ClockButtons from "./ClockButtons";
 import PropTypes from 'prop-types';
 
 //Credit: https://w3collective.com/react-stopwatch/
@@ -36,10 +36,10 @@ function Clock(props){
     Clock.propTypes = {
         time: PropTypes.number,
         makeDiveLogEntry: PropTypes.func,
-        diveLog: PropTypes.func,
+        diveLog: PropTypes.array,
         setFormTSRGD: PropTypes.func,
         setOnO2: PropTypes.func,
-        onO2: PropTypes.object
+        onO2: PropTypes.bool
     } 
     
     

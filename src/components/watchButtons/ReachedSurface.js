@@ -27,7 +27,7 @@ function ReachedSurface(props){
 ReachedSurface.propTypes = {
     LB: PropTypes.object,
     setRS: PropTypes.func,
-    makeDiveLogEntry: PropTypes.func.isRequired
+    makeDiveLogEntry: PropTypes.func
 }
 
 export default ReachedSurface;

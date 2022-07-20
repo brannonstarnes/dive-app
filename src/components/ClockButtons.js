@@ -35,12 +35,12 @@ function ClockButtons(props){
 }
 
 ClockButtons.propTypes = {
-    LS: PropTypes.node,
+    LS: PropTypes.object,
     makeDiveLogEntry: PropTypes.func,
     setClockTime: PropTypes.func,
     setIsRunning: PropTypes.func,
     setOnO2: PropTypes.func,
-    onO2: PropTypes.object
+    onO2: PropTypes.bool
 }
 
 export default ClockButtons;

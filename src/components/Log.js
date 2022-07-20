@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 
 function Log(props){
 
@@ -23,6 +23,14 @@ function Log(props){
             </div>
         </div>
     )
+}
+
+Log.propTypes = {
+    diveLog: PropTypes.array,
+    D: PropTypes.number,
+    schedule: PropTypes.number,
+    formTSRGD: PropTypes.string,
+    BT: PropTypes.number
 }
 
 export default Log;
