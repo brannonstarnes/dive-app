@@ -2,6 +2,7 @@ import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { roundUpTime } from "../../calculations/stringifyTime";
 import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
 
 function LeftBottom(props) {
   let LB;
@@ -9,7 +10,9 @@ function LeftBottom(props) {
   let BT;
 
   return (
-    <button
+    <Button
+      variant="contained"
+      color="primary"
       onClick={() => [
         (LB = new Date()),
         props.setLB(LB),
@@ -19,7 +22,7 @@ function LeftBottom(props) {
       ]}
     >
       Left Bottom
-    </button>
+    </Button>
   );
 }
 

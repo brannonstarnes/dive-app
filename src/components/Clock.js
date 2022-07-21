@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ClockButtons from "./ClockButtons";
 import PropTypes from "prop-types";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 //Credit: https://w3collective.com/react-stopwatch/
 function Clock(props) {
@@ -21,30 +24,50 @@ function Clock(props) {
   }, [isRunning]);
 
   return (
-    <div className="stopwatchContainer">
-      <span className="timeDisplay">
-        <span className="clockTime" id="hours">
-          {("0" + Math.floor((time / 600000) % 60)).slice(-2)}
-        </span>
-        :
-        <span className="clockTime" id="minutes">
-          {("0" + Math.floor((time / 60000) % 60)).slice(-2)}
-        </span>
-        :
-        <span className="clockTime" id="seconds">
-          {("0" + Math.floor((time / 1000) % 60)).slice(-2)}
-        </span>
-        {/* <span className="clockTime" id="milliseconds">{("0" + Math.floor((time /10) % 100)).slice(-2)}</span> */}
-      </span>
-      <ClockButtons
-        makeDiveLogEntry={props.makeDiveLogEntry}
-        setIsRunning={setIsRunning}
-        setClockTime={setClockTime}
-        diveLog={props.diveLog}
-        setOnO2={props.setOnO2}
-        onO2={props.onO2}
-      />
-    </div>
+    <>
+      <Container
+        className="stopwatchContainer"
+        maxWidth="lg"
+        sx={{ margin: "8px" }}
+      >
+        <Box
+          sx={{
+            bgcolor: "black",
+            color: "white",
+            height: "7vh",
+            width: "29.1%",
+            textAlign: "center",
+            padding: "5px",
+          }}
+        >
+          <Typography variant="h3">
+            <span className="timeDisplay">
+              <span className="clockTime" id="hours">
+                {("0" + Math.floor((time / 600000) % 60)).slice(-2)}
+              </span>
+              :
+              <span className="clockTime" id="minutes">
+                {("0" + Math.floor((time / 60000) % 60)).slice(-2)}
+              </span>
+              :
+              <span className="clockTime" id="seconds">
+                {("0" + Math.floor((time / 1000) % 60)).slice(-2)}
+              </span>
+              {/* <span className="clockTime" id="milliseconds">{("0" + Math.floor((time /10) % 100)).slice(-2)}</span> */}
+            </span>
+          </Typography>
+        </Box>
+
+        <ClockButtons
+          makeDiveLogEntry={props.makeDiveLogEntry}
+          setIsRunning={setIsRunning}
+          setClockTime={setClockTime}
+          diveLog={props.diveLog}
+          setOnO2={props.setOnO2}
+          onO2={props.onO2}
+        />
+      </Container>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
 
 function OnO2(props) {
   const buttonStatus = () => {
@@ -21,7 +22,9 @@ function OnO2(props) {
   let o2ButtonLabel = buttonStatus();
 
   return (
-    <button
+    <Button
+      variant="contained"
+      color="success"
       id="o2Button"
       onClick={() => [
         (o2EventTime = new Date()),
@@ -31,7 +34,7 @@ function OnO2(props) {
       ]}
     >
       {o2ButtonLabel}
-    </button>
+    </Button>
   );
 }
 
