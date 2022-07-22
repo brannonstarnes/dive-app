@@ -5,6 +5,8 @@ import Forms from "./components/Forms";
 import Clock from "./components/Clock";
 import Log from "./components/Log";
 import PropTypes from "prop-types";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 function App() {
   const [bottomTime, setBottomTime] = useState();
@@ -28,28 +30,40 @@ function App() {
   return (
     <>
       <Header />
-      <Forms
-        getBT={getBottomTime}
-        setDepth={setDepth}
-        setBT={setBottomTime}
-        depth={depth}
-        BT={bottomTime}
-        setFormTSRGD={setFormTSRGD}
-        setSchedule={setSchedule}
-      />
-      <Clock
-        makeDiveLogEntry={makeDiveLogEntry}
-        diveLog={diveLog}
-        setOnO2={setOnO2}
-        onO2={onO2}
-      />
-      <Log
-        diveLog={diveLog}
-        BT={bottomTime}
-        D={depth}
-        formTSRGD={formTSRGD}
-        schedule={schedule}
-      />
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          border: "1px solid red",
+        }}
+      >
+        <Box>
+          <Forms
+            getBT={getBottomTime}
+            setDepth={setDepth}
+            setBT={setBottomTime}
+            depth={depth}
+            BT={bottomTime}
+            setFormTSRGD={setFormTSRGD}
+            setSchedule={setSchedule}
+          />
+          <Clock
+            makeDiveLogEntry={makeDiveLogEntry}
+            diveLog={diveLog}
+            setOnO2={setOnO2}
+            onO2={onO2}
+          />
+        </Box>
+        <Box textAlign={"right"}>
+          <Log
+            diveLog={diveLog}
+            BT={bottomTime}
+            D={depth}
+            formTSRGD={formTSRGD}
+            schedule={schedule}
+          />
+        </Box>
+      </Container>
     </>
   );
 }

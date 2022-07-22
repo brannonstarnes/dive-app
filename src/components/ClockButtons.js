@@ -21,7 +21,6 @@ function ClockButtons(props) {
         aria-label="vertical contained button group"
         variant="contained"
         size="small"
-        sx={{ width: "15%" }}
       >
         <LeftSurface
           setLS={setLS}
@@ -48,7 +47,6 @@ function ClockButtons(props) {
         aria-label="vertical contained button group"
         variant="contained"
         size="small"
-        sx={{ width: "15%" }}
       >
         <Hold makeDiveLogEntry={props.makeDiveLogEntry} />
 

@@ -6,6 +6,8 @@ import { getSchedule } from "../tableSchedRGD.js";
 import { getRGD } from "../tableSchedRGD";
 import { chartMap } from "../charts.js";
 import PropTypes from "prop-types";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 function Forms(props) {
   const [formDepth, setFormDepth] = useState();
@@ -26,41 +28,43 @@ function Forms(props) {
   };
 
   return (
-    <div className="forms-container">
-      <form
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
-        <label>
-          Depth (fsw):
-          <input
-            className="dive-profile-form"
-            id="depth"
-            type="integer"
-            name="depth"
-            onChange={(e) => setFormDepth(e.target.value)}
-            value={formDepth || ""}
-          />
-        </label>
-        <br />
+    <Container className="forms-container" sx={{ border: "1px solid purple" }}>
+      <Box>
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
+          <label>
+            Depth (fsw):
+            <input
+              className="dive-profile-form"
+              id="depth"
+              type="integer"
+              name="depth"
+              onChange={(e) => setFormDepth(e.target.value)}
+              value={formDepth || ""}
+            />
+          </label>
+          <br />
 
-        <label>
-          Bottom Time (min):
-          <input
-            className="dive-profile-form"
-            id="bt"
-            type="integer"
-            name="bt"
-            onChange={(e) => setFormBT(e.target.value)}
-            value={formBT || ""}
-          />
-        </label>
-        <br />
+          <label>
+            Bottom Time (min):
+            <input
+              className="dive-profile-form"
+              id="bt"
+              type="integer"
+              name="bt"
+              onChange={(e) => setFormBT(e.target.value)}
+              value={formBT || ""}
+            />
+          </label>
+          <br />
 
-        <input className="submitButton" type="submit" value="Get T/S" />
-      </form>
-    </div>
+          <input className="submitButton" type="submit" value="Get T/S" />
+        </form>
+      </Box>
+    </Container>
   );
 }
 

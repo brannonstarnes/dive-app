@@ -28,33 +28,33 @@ function Clock(props) {
       <Container
         className="stopwatchContainer"
         maxWidth="lg"
-        sx={{ margin: "8px" }}
+        sx={{ margin: "8px", border: "1px solid blue" }}
       >
         <Box
           sx={{
             bgcolor: "black",
             color: "white",
             height: "7vh",
-            width: "29.1%",
             textAlign: "center",
             padding: "5px",
+            marginBottom: "8px",
           }}
         >
           <Typography variant="h3">
-            <span className="timeDisplay">
+            <Box className="timeDisplay">
               <span className="clockTime" id="hours">
-                {("0" + Math.floor((time / 600000) % 60)).slice(-2)}
+                {("0" + Math.floor((time / (1000 * 60 * 60)) % 60)).slice(-2)}
               </span>
               :
               <span className="clockTime" id="minutes">
-                {("0" + Math.floor((time / 60000) % 60)).slice(-2)}
+                {("0" + Math.floor((time / (1000 * 60)) % 60)).slice(-2)}
               </span>
               :
               <span className="clockTime" id="seconds">
                 {("0" + Math.floor((time / 1000) % 60)).slice(-2)}
               </span>
               {/* <span className="clockTime" id="milliseconds">{("0" + Math.floor((time /10) % 100)).slice(-2)}</span> */}
-            </span>
+            </Box>
           </Typography>
         </Box>
 
