@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import LeftBottom from "./watchButtons/leftBottom";
-import LeftSurface from "./watchButtons/leftSurface";
-import ReachedBottom from "./watchButtons/reachBottom";
-import ReachSurface from "./watchButtons/reachSurface";
-import Hold from "./watchButtons/hold";
-import OnO2 from "./watchButtons/onO2";
+import LeftBottom from "./watchButtons/LeftBottom";
+import LeftSurface from "./watchButtons/LeftSurface";
+import ReachedBottom from "./watchButtons/ReachedBottom";
+import ReachSurface from "./watchButtons/ReachedSurface";
+import Hold from "./watchButtons/Hold";
+import OnO2 from "./watchButtons/OnO2";
 
 
 function ClockButtons(props){

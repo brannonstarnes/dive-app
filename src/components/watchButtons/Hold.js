@@ -1,8 +1,9 @@
 import React from "react"; 
 import stringifyTime from "../../calculations/stringifyTime";
 
+
+/* dssfsd */
 function Hold(props){
-    
     let hold;
     let stringHold;
     // let holdTime; //resume - hold = descent

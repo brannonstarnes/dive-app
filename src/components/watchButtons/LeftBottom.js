@@ -3,12 +3,10 @@ import stringifyTime from '../../calculations/stringifyTime'
 import { roundUpTime } from "../../calculations/stringifyTime";
 
 function LeftBottom(props){
-    
     let LB;
     let stringLB;
     let BT;
 
-    
     return (
         <button onClick={()=> 
             [

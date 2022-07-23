@@ -1,4 +1,5 @@
-    // TODO: Commented out are Decompression Tables. Once No-Deco is complete, finish Deco tables.
+    // TODO: Commented out are Decompression Tables. Once No-Deco is complete, will finish Deco tables.
+    
     // const thirtyDeco380 = {
     //     deco: true,
     //     desig: "Z",
