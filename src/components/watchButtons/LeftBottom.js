@@ -2,6 +2,7 @@ import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { roundUpTime } from "../../calculations/stringifyTime";
 import { Button } from "@mui/material";
+import PropTypes from "prop-types";
 
 function LeftBottom(props) {
   let LB;
@@ -23,5 +24,11 @@ function LeftBottom(props) {
     </Button>
   );
 }
+  
+LeftBottom.propTypes = {
+  LS: PropTypes.object,
+  setLB: PropTypes.func,
+  makeDiveLogEntry: PropTypes.func,
+};
 
 export default LeftBottom;

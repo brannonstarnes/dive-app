@@ -2,6 +2,7 @@ import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { roundUpTime } from "../../calculations/stringifyTime";
 import { Button } from "@mui/material";
+import PropTypes from "prop-types";
 
 function ReachedBottom(props) {
   let RB;
@@ -24,5 +25,11 @@ function ReachedBottom(props) {
     </Button>
   );
 }
+
+ReachedBottom.propTypes = {
+  LS: PropTypes.object,
+  makeDiveLogEntry: PropTypes.func,
+};
+
 
 export default ReachedBottom;

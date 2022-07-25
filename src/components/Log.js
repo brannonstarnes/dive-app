@@ -1,5 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from 'prop-types';
+
 function Log(props) {
   const mapEntries = props.diveLog.map((entry) => {
     return <li key={entry}>{entry}</li>;
@@ -23,6 +25,14 @@ function Log(props) {
       </div>
     </Typography>
   );
+}
+
+Log.propTypes = {
+    diveLog: PropTypes.array,
+    D: PropTypes.number,
+    schedule: PropTypes.number,
+    formTSRGD: PropTypes.string,
+    BT: PropTypes.number
 }
 
 export default Log;

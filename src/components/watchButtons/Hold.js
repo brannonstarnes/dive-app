@@ -2,6 +2,7 @@ import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 /* A hold is a stoppage or delay in descent or ascent. This may be due to a middle ear squeeze as pressure increases, etc. Once the problem that caused the hold has been dealt with, the dive can resume.This is especially important on ascent, as delays on ascent can cause unexpected procedural/deco status changes. */
 
@@ -38,5 +39,9 @@ function Hold(props) {
     </Button>
   );
 }
+
+Hold.propTypes = {
+  makeDiveLogEntry: PropTypes.func,
+};
 
 export default Hold;

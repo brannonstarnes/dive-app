@@ -2,6 +2,7 @@ import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { addLeadingZerosToTimes } from "../../calculations/stringifyTime";
 import { Button } from "@mui/material";
+import PropTypes from "prop-types";
 
 function ReachedSurface(props) {
   let RS;
@@ -12,6 +13,7 @@ function ReachedSurface(props) {
   return (
     <Button
       variant="contained"
+    <button
       onClick={() => [
         (RS = new Date()),
         props.setRS(RS),
@@ -25,5 +27,12 @@ function ReachedSurface(props) {
     </Button>
   );
 }
+
+
+ReachedSurface.propTypes = {
+  LB: PropTypes.object,
+  setRS: PropTypes.func,
+  makeDiveLogEntry: PropTypes.func,
+};
 
 export default ReachedSurface;

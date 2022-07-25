@@ -1,6 +1,7 @@
 import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { Button } from "@mui/material";
+import PropTypes from "prop-types";
 
 function LeftSurface(props) {
   let LS; //needs to be state to pass to other components
@@ -20,5 +21,11 @@ function LeftSurface(props) {
     </Button>
   );
 }
+ 
+LeftSurface.propTypes = {
+  setIsRunning: PropTypes.func,
+  setLS: PropTypes.func,
+  makeDiveLogEntry: PropTypes.func,
+};
 
 export default LeftSurface;

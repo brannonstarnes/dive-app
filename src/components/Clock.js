@@ -3,6 +3,7 @@ import ClockButtons from "./ClockButtons";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 //Credit: https://w3collective.com/react-stopwatch/
 function Clock(props) {
@@ -54,7 +55,6 @@ function Clock(props) {
           </Typography>
         </Box>
       </Container>
-
       <ClockButtons
         makeDiveLogEntry={props.makeDiveLogEntry}
         setIsRunning={setIsRunning}
@@ -68,4 +68,14 @@ function Clock(props) {
     </>
   );
 }
+      
+Clock.propTypes = {
+  time: PropTypes.number,
+  makeDiveLogEntry: PropTypes.func,
+  diveLog: PropTypes.array,
+  setFormTSRGD: PropTypes.func,
+  setOnO2: PropTypes.func,
+  onO2: PropTypes.bool,
+};
+
 export default Clock;

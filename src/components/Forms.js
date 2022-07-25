@@ -8,6 +8,7 @@ import { chartMap } from "../charts.js";
 import { Button, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
 
 function Forms(props) {
   const [formDepth, setFormDepth] = useState();
@@ -21,6 +22,14 @@ function Forms(props) {
     var calculatedSchedule = getSchedule(formBT, table); //determines which schedule to use in chart
     props.setBT(calculatedSchedule);
     const TSRGD = getRGD(table, calculatedSchedule);
+    // eslint-disable-next-line react/prop-types
+    props.setDepth(newDepth);
+    var table = getChart(newDepth, chartMap); //gets chart by using corrected depth
+    var calculatedSchedule = getSchedule(formBT, table); //determines which schedule to use in chart
+    // eslint-disable-next-line react/prop-types
+    props.setBT(calculatedSchedule);
+    const TSRGD = getRGD(table, calculatedSchedule);
+    // eslint-disable-next-line react/prop-types
     props.setFormTSRGD(TSRGD);
   };
 
@@ -86,4 +95,13 @@ function Forms(props) {
     </Container>
   );
 }
+
+Forms.propTypes = {
+  BT: PropTypes.number,
+  setDepth: PropTypes.func,
+  setBT: PropTypes.func,
+  setFormTSRGD: PropTypes.func,
+  formBT: PropTypes.number,
+};
+
 export default Forms;

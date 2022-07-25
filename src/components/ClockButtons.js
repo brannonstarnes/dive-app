@@ -9,6 +9,7 @@ import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import PropTypes from "prop-types";
 
 function ClockButtons(props) {
   const [LS, setLS] = useState();
@@ -75,5 +76,14 @@ function ClockButtons(props) {
     </>
   );
 }
+
+ClockButtons.propTypes = {
+  LS: PropTypes.object,
+  makeDiveLogEntry: PropTypes.func,
+  setClockTime: PropTypes.func,
+  setIsRunning: PropTypes.func,
+  setOnO2: PropTypes.func,
+  onO2: PropTypes.bool,
+};
 
 export default ClockButtons;
