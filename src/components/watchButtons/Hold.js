@@ -1,6 +1,7 @@
 import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
 
 function Hold(props) {
   let hold;
@@ -8,7 +9,9 @@ function Hold(props) {
   // let holdTime; //resume - hold = descent
 
   return (
-    <button
+    <Button
+      variant="contained"
+      color="warning"
       onClick={() => [
         (hold = new Date()),
         (stringHold = stringifyTime(hold)),
@@ -16,7 +19,7 @@ function Hold(props) {
       ]}
     >
       HOLD!
-    </button>
+    </Button>
   );
 }
 
