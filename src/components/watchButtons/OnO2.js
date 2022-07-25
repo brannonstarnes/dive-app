@@ -1,7 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
 import stringifyTime from "../../calculations/stringifyTime";
+import { Button } from "@mui/material";
 import PropTypes from "prop-types";
+
+/*The OnO2 button will toggle between the labels "On O2" and "Off O2". If onO2 is true, 'Off O2' is displayed/ if onO2 is false, 'On O2' is displayed. (Think, if I'm not on O2, I want to push the button that puts me ON O2). 
+O2 times are extremely important in diving and recompression treatments. Times on o2 must be logged as well as delays (known as deadtime) and off O2 times (called an air break).*/
 
 function OnO2(props) {
   const buttonStatus = () => {
@@ -21,7 +25,9 @@ function OnO2(props) {
   let o2ButtonLabel = buttonStatus();
 
   return (
-    <button
+    <Button
+      variant="contained"
+      color="success" //make this change from dull green to bright green when on O2
       id="o2Button"
       onClick={() => [
         (o2EventTime = new Date()),
@@ -31,13 +37,14 @@ function OnO2(props) {
       ]}
     >
       {o2ButtonLabel}
-    </button>
+    </Button>
   );
 }
-
+ 
 OnO2.propTypes = {
   makeDiveLogEntry: PropTypes.func,
   onO2: PropTypes.bool,
   setOnO2: PropTypes.func,
 };
+
 export default OnO2;

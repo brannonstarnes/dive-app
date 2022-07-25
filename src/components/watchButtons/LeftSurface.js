@@ -1,12 +1,14 @@
 import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
+import { Button } from "@mui/material";
 import PropTypes from "prop-types";
 
 function LeftSurface(props) {
   let LS; //needs to be state to pass to other components
   let stringLS;
   return (
-    <button
+    <Button
+      variant="contained"
       onClick={() => [
         props.setIsRunning(true),
         (LS = new Date()),
@@ -16,10 +18,10 @@ function LeftSurface(props) {
       ]}
     >
       Left Surface
-    </button>
+    </Button>
   );
 }
-
+ 
 LeftSurface.propTypes = {
   setIsRunning: PropTypes.func,
   setLS: PropTypes.func,

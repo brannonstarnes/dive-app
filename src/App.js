@@ -13,6 +13,7 @@ function App() {
   const [diveLog, setDiveLog] = useState([]);
   const [formTSRGD, setFormTSRGD] = useState();
   const [schedule, setSchedule] = useState();
+  const [onHold, setOnHold] = useState(false);
   // const [reachBottom, setRB] = useState(0);
 
   const getBottomTime = (leftSurf, leftBott) => {
@@ -42,6 +43,8 @@ function App() {
         diveLog={diveLog}
         setOnO2={setOnO2}
         onO2={onO2}
+        setOnHold={setOnHold}
+        onHold={onHold}
       />
       <Log
         diveLog={diveLog}

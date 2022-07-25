@@ -1,6 +1,7 @@
 import React from "react";
 import stringifyTime from "../../calculations/stringifyTime";
 import { roundUpTime } from "../../calculations/stringifyTime";
+import { Button } from "@mui/material";
 import PropTypes from "prop-types";
 
 function ReachedBottom(props) {
@@ -9,7 +10,8 @@ function ReachedBottom(props) {
   let descent; //Time from "left surface" to "reached bottom, always rounded UP to nearest minute"
 
   return (
-    <button
+    <Button
+      variant="contained"
       onClick={() => [
         (RB = new Date()),
         (descent = RB.getTime() - props.LS.getTime()),
@@ -20,7 +22,7 @@ function ReachedBottom(props) {
       ]}
     >
       Reached Bottom
-    </button>
+    </Button>
   );
 }
 
@@ -28,5 +30,6 @@ ReachedBottom.propTypes = {
   LS: PropTypes.object,
   makeDiveLogEntry: PropTypes.func,
 };
+
 
 export default ReachedBottom;
